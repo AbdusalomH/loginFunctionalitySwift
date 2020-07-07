@@ -36,11 +36,11 @@ class ViewController: UIViewController {
             try login()
             
         } catch loginError.IncopleteForm {
-            Alert.showBasic(title: "Ошибка!", message: "Введите свой логин и пароль", vc: self)
+            Alert.showBasic(title: "Error", message: "Please enter your email and password", vc: self)
         } catch loginError.IncorrectEmail {
-            Alert.showBasic(title: "Ошибка!", message: "Не правильная почта", vc: self)
+            Alert.showBasic(title: "Error!", message: "Invalid email1", vc: self)
         } catch loginError.IncorrectPassword {
-            Alert.showBasic(title: "Ошибка!", message: "Пароль должент быть не менее 8 символов", vc: self)
+            Alert.showBasic(title: "Error!", message: "Password should not be less than 8 characters", vc: self)
         } catch {
             print(error.localizedDescription)
         }
